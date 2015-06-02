@@ -5,9 +5,9 @@ var express = require('express'),
     io = require('socket.io')(http),
     socket = require('./server/socket');
 
-app.set('views', path.join(__dirname, '/client'));
+app.set('views', path.join(__dirname, '/public'));
 app.set('view engine', 'html');
-app.use(express.static(path.join(__dirname, '/client/public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/', function(req, res){
   res.render('index');

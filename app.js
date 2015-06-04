@@ -3,7 +3,7 @@ var express = require('express'),
     http = require('http').Server(app),
     path = require('path'),
     io = require('socket.io')(http),
-    socket = require('./game/server');
+    socket = require('./gameserver');
 
 app.set('views', path.join(__dirname, '/public'));
 app.set('view engine', 'html');

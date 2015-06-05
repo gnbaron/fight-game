@@ -5,9 +5,7 @@ module.exports = function (socket) {
   socket.broadcast.emit('player:enter', socket.handshake.address);
 
   socket.on('player:move', function (data) {
-    //TODO
-    // console.log('position : '+data);
-    // socket.broadcast.emit('player:move', data.message);
+    socket.broadcast.emit('player:move', data);
   });
 
   socket.on('disconnect', function () {

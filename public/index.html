@@ -6,6 +6,16 @@
   </head>
   <body>
     <canvas id="game"> </canvas>
+    <script type="text/javascript">
+	  var keysDown = {};
+	  addEventListener("keydown", function (e) {
+  		  keysDown[e.keyCode] = true;
+	  }, false);
+
+	  addEventListener("keyup", function (e) {
+	  	  delete keysDown[e.keyCode];
+	  }, false); 
+    </script>
     <script type="text/javascript" src="/js/client.js"></script>
   </body>
 </html>
